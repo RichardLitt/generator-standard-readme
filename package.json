@@ -1,0 +1,51 @@
+{
+  "name": "generator-standard-readme",
+  "version": "0.0.0",
+  "description": "Scaffold out a Standard Readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RichardLitt/generator-standard-readme.git"
+  },
+  "homepage": "https://github.com/RichardLitt/generator-standard-readme",
+  "bugs": "https://github.com/RichardLitt/generator-standard-readme/issues",
+  "author": {
+    "name": "Richard Littauer",
+    "email": "richard.littauer@gmail.com",
+    "url": "burntfen.com"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "standard && ava"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "plugin",
+    "boilerplate",
+    "template",
+    "scaffold",
+    "readme",
+    "standard"
+  ],
+  "dependencies": {
+    "underscore.string": "^3.0.3",
+    "yeoman-generator": "^0.22.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^5.0.0-beta6",
+    "pify": "^2.2.0",
+    "standard": "^5.4.1",
+    "yeoman-assert": "^2.0.0",
+    "yeoman-test": "^1.0.0"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "app/templates/"
+    ]
+  },
+  "coordinates": [
+    69.67724179999999,
+    18.9868415
+  ]
+}
