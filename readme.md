@@ -13,7 +13,7 @@ Tip: Use [chalk](https://github.com/sindresorhus/chalk) if you want colors in yo
 This generator requires [node](https://nodejs.org), [npm](https://npmjs.com), and [yeoman](http://yeoman.io/).
 
 ```
-$ npm install --global generator-standard-readme
+$ npm install --global yo generator-standard-readme
 ```
 
 ## Usage
