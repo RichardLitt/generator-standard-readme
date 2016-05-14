@@ -24,6 +24,8 @@ With [yo](https://github.com/yeoman/yo):
 $ yo standard-readme
 ```
 
+This will write a file, `readme.md`, to the local directory.
+
 ## Contribute
 
 Please contribute! [Open an issue](https://github.com/RichardLitt/generator-standard-readme/issues/new).
