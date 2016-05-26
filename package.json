@@ -14,6 +14,9 @@
     "email": "richard.littauer@gmail.com",
     "url": "burntfen.com"
   },
+  "bin": {
+    "standard-readme": "app/bin.js"
+  },
   "scripts": {
     "lint": "standard",
     "test": "standard && ava"
@@ -29,6 +32,7 @@
   ],
   "dependencies": {
     "underscore.string": "^3.0.3",
+    "yeoman-environment": "^1.6.1",
     "yeoman-generator": "^0.22.1"
   },
   "devDependencies": {
