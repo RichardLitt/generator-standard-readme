@@ -96,10 +96,6 @@ module.exports = yeoman.Base.extend({
         security: props.security
       }
 
-      const mv = (from, to) => {
-        self.fs.move(self.destinationPath(from), self.destinationPath(to))
-      }
-
       self.fs.copyTpl([
         `${self.templatePath()}/readme.md`
       ], self.destinationPath(), tpl)
