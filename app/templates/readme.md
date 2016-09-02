@@ -14,7 +14,7 @@ TODO: Put badges here.
 
 <% if (security) { %>- [Security](#security)
 <% } %><% if (background) { %>- [Background](#background)
-<% } %>- [Installation](#installation)
+<% } %>- [Install](#install)
 - [Usage](#usage)
 <% if (API) { %>- [API](#api)
 <% } %>- [Contribute](#contribute)
