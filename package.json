@@ -1,6 +1,6 @@
 {
   "name": "generator-standard-readme",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Scaffold out a Standard Readme",
   "license": "MIT",
   "repository": {
@@ -13,6 +13,9 @@
     "name": "Richard Littauer",
     "email": "richard.littauer@gmail.com",
     "url": "burntfen.com"
+  },
+  "bin": {
+    "standard-readme": "app/bin.js"
   },
   "scripts": {
     "lint": "standard",
@@ -29,9 +32,11 @@
   ],
   "dependencies": {
     "underscore.string": "^3.0.3",
+    "yeoman-environment": "^1.6.1",
     "yeoman-generator": "^0.22.1"
   },
   "devDependencies": {
+    "ava": "^0.15.2",
     "babel-eslint": "^5.0.0-beta6",
     "pify": "^2.2.0",
     "standard": "^5.4.1",
@@ -45,7 +50,5 @@
     ]
   },
   "coordinates": [
-    45.5231596,
-    -73.5870259
   ]
 }
