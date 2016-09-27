@@ -28,8 +28,13 @@ module.exports = yeoman.Base.extend({
       type: 'input',
       when: (answers) => answers.banner
     }, {
+      name: 'badge',
+      message: 'Do you want a standard-readme compliant badge?',
+      type: 'confirm',
+      default: true
+    }, {
       name: 'badges',
-      message: 'Do you want a TODO dropped where your badges should be?',
+      message: 'Do you want a TODO dropped where more badges should be?',
       type: 'confirm',
       default: false
     }, {
@@ -82,6 +87,7 @@ module.exports = yeoman.Base.extend({
       const tpl = {
         API: props.API,
         background: props.background,
+        badge: props.badge,
         badges: props.badges,
         banner: props.banner,
         bannerPath: props.bannerPath,
