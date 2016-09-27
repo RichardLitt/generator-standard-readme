@@ -1,13 +1,11 @@
 # <%= moduleName %>
-
 <% if (banner) { %>
 ![banner](<% bannerPath %>)
-
 <% } %><% if (badge) { %>
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)<% } %><% if (badges) { %>
-TODO: Put more badges here.
+TODO: Put more badges here.<% } %>
 
-<% } %>> <%= description %>
+> <%= description %>
 
 <% if (longDescription) { %>TODO: Fill out this long description.
 
