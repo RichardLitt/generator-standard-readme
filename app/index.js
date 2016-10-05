@@ -103,7 +103,7 @@ module.exports = yeoman.Base.extend({
       }
 
       self.fs.copyTpl([
-        `${self.templatePath()}/README.md`
+        `${self.templatePath()}/readme.md`
       ], self.destinationPath(), tpl)
 
       cb()
