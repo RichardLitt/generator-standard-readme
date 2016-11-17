@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-var yeoman = require('yeoman-environment')
-var env = yeoman.createEnv()
+const yeoman = require('yeoman-environment')
+const path = require('path')
+const env = yeoman.createEnv()
 
-env.register(__dirname + '/index.js', 'standard-readme:app')
+env.register(path.join(__dirname, '/index.js'), 'standard-readme:app')
 
 env.run('standard-readme:app')
