@@ -76,4 +76,4 @@ Please contribute! [Look at the issues](https://github.com/RichardLitt/generator
 
 ## License
 
-MIT © [Richard Littauer](http://burntfen.com)
+MIT © 2016 [Richard Littauer](http://burntfen.com)
