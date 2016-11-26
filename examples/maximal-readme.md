@@ -1,13 +1,11 @@
-# examples
-
+# example
 
 ![banner]()
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-
 TODO: Put more badges here.
 
-> This is an example file with maximal choices selected.
+> test
 
 TODO: Fill out this long description.
 
@@ -15,7 +13,7 @@ TODO: Fill out this long description.
 
 - [Security](#security)
 - [Background](#background)
-- [Installation](#installation)
+- [Install](#install)
 - [Usage](#usage)
 - [API](#api)
 - [Contribute](#contribute)
