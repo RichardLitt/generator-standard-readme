@@ -1,12 +1,14 @@
-# example
+# temp
 
-> This is an example file with default selections.
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
+> test
 
 TODO: Fill out this long description.
 
 ## Table of Contents
 
-- [Installation](#installation)
+- [Install](#install)
 - [Usage](#usage)
 - [Contribute](#contribute)
 - [License](#license)
