@@ -3,6 +3,7 @@ import test from 'ava'
 import helpers from 'yeoman-test'
 import assert from 'yeoman-assert'
 import pify from 'pify'
+import fs from 'graceful-fs'
 
 let generator
 
@@ -22,5 +23,39 @@ test.serial('generates expected files', async () => {
   assert.file([
     'README.md'
   ])
+})
+
+test.serial('generates default file', async () => {
+  helpers.mockPrompt(generator, {
+    licensee: 'Richard McRichface'
+  })
+
+  await pify(generator.run.bind(generator))()
+
+  assert.fileContent('README.md', fs.readFileSync('../examples/default-readme.md').toString())
+})
+
+test.serial('generates maximal file', async () => {
+  helpers.mockPrompt(generator, {
+    API: true,
+    background: true,
+    badge: true,
+    badges: true,
+    banner: true,
+    bannerPath: 'test',
+    contributeFile: true,
+    description: 'test',
+    license: 'test',
+    licensee: 'Richard McRichface',
+    longDescription: true,
+    mit: true,
+    moduleName: 'example',
+    prs: true,
+    security: true
+  })
+
+  await pify(generator.run.bind(generator))()
+
+  assert.fileContent('README.md', fs.readFileSync('../examples/maximal-readme.md').toString())
 })
 
