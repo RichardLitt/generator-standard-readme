@@ -48,6 +48,7 @@ test.serial('generates maximal file', async () => {
     license: 'test',
     licensee: 'Richard McRichface',
     longDescription: true,
+    maintainers: true,
     mit: true,
     moduleName: 'example',
     prs: true,

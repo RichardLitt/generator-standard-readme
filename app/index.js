@@ -58,6 +58,11 @@ module.exports = yeoman.Base.extend({
       type: 'confirm',
       default: false
     }, {
+      name: 'Maintainers',
+      message: 'Do you need a Maintainers section?',
+      type: 'confirm',
+      default: false
+    }, {
       name: 'contributeFile',
       message: 'Do you have a CONTRIBUTE.md file?',
       type: 'confirm',
@@ -96,6 +101,7 @@ module.exports = yeoman.Base.extend({
         license: props.license,
         licensee: props.licensee,
         longDescription: props.longDescription,
+        Maintainers: props.Maintainers,
         mit: props.mit,
         moduleName: props.moduleName,
         prs: props.prs,

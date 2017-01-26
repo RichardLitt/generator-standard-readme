@@ -35,6 +35,8 @@ TODO: Put more badges here.<% } %>
 
 <% if (API) { %>## API
 
+<% } %><% if (Maintainers) { %>## Maintainers
+
 <% } %>## Contribute
 
 <% if (contributeFile) { %>See [the contribute file](contribute.md)!
