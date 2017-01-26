@@ -58,7 +58,7 @@ module.exports = yeoman.Base.extend({
       type: 'confirm',
       default: false
     }, {
-      name: 'Maintainers',
+      name: 'maintainers',
       message: 'Do you need a Maintainers section?',
       type: 'confirm',
       default: false
@@ -101,7 +101,7 @@ module.exports = yeoman.Base.extend({
         license: props.license,
         licensee: props.licensee,
         longDescription: props.longDescription,
-        Maintainers: props.Maintainers,
+        maintainers: props.maintainers,
         mit: props.mit,
         moduleName: props.moduleName,
         prs: props.prs,
