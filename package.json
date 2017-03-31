@@ -5,14 +5,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RichardLitt/generator-standard-readme.git"
+    "url": "https://github.com/jeff-matthews/generator-standard-readme.git"
   },
-  "homepage": "https://github.com/RichardLitt/generator-standard-readme",
-  "bugs": "https://github.com/RichardLitt/generator-standard-readme/issues",
+  "homepage": "https://github.com/jeff-matthews/generator-standard-readme",
+  "bugs": "https://github.com/jeff-matthews/generator-standard-readme/issues",
   "author": {
-    "name": "Richard Littauer",
-    "email": "richard.littauer@gmail.com",
-    "url": "burntfen.com"
+    "name": "Jeff Matthews"
   },
   "bin": {
     "standard-readme": "app/bin.js"
