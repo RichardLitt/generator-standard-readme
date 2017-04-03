@@ -12,14 +12,11 @@ _Explain what your module does in greater detail and why someone might want to u
 
 ## Table of Contents
 
-<% if (security) { %>- [Security](#security)<% } %>
-<% if (background) { %>- [Background](#background)<% } %>
-- [Installation](#installation)
-<% if (configuration) { %>- [Configuration](#configuration)<% } %>
-- [Usage](#usage)
-<% if (API) { %>- [API](#api)<% } %>
-- [Contribute](#contribute)
-- [License](#license)
+<% if (security) { %>- [Security](#security)
+<% } %><% if (background) { %>- [Background](#background)
+<% } %>- [Installation](#installation)<% if (configuration) { %>- [Configuration](#configuration)<% } %>
+- [Usage](#usage)<% if (API) { %>- [API](#api)<% } %>
+<% if (contribute) { %>- [Contribute](#contribute)<% } %>- [License](#license)
 
 <% if (security) { %>## Security
 _Highlight important security issues/concerns in this section._

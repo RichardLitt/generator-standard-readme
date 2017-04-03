@@ -83,6 +83,7 @@ module.exports = yeoman.Base.extend({
         API: props.API,
         background: props.background,
         configuration: props.configuration,
+        contribute: props.contribute,
         badge: props.badge,
         badges: props.badges,
         banner: props.banner,
