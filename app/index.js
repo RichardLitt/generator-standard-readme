@@ -9,14 +9,14 @@ module.exports = yeoman.Base.extend({
 
     this.prompt([{
       name: 'moduleName',
-      message: 'What do you want to name your module?',
+      message: 'What is the name of your module?',
       default: this.appname.replace(/\s/g, '-'),
       filter: x => _s.slugify(x)
     }, {
       name: 'description',
-      message: 'What is the description of this module?',
+      message: 'Write a short one-liner describing your module:',
       store: true,
-      validate: x => x.length > 0 ? true : 'You have to provide a module description'
+      validate: x => x.length > 0 ? true : 'You must provide a description.'
     }, {
       name: 'banner',
       message: 'Do have a banner image?',
@@ -38,18 +38,18 @@ module.exports = yeoman.Base.extend({
       type: 'confirm',
       default: false
     }, {
-      name: 'longDescription',
-      message: 'Do you want a TODO dropped where your long description should be?',
-      type: 'confirm',
-      default: true
-    }, {
       name: 'security',
-      message: 'Do you need a prioritized security section?',
+      message: 'Do you need a prioritized Security section added to the top of the README?',
+      type: 'confirm',
+      default: false
+    }, {
+      name: 'configuration',
+      message: 'Do you need a Configuration section?',
       type: 'confirm',
       default: false
     }, {
       name: 'background',
-      message: 'Do you need a background section?',
+      message: 'Do you need a Background section?',
       type: 'confirm',
       default: false
     }, {
@@ -58,18 +58,8 @@ module.exports = yeoman.Base.extend({
       type: 'confirm',
       default: false
     }, {
-      name: 'maintainers',
-      message: 'Do you need a Maintainers section?',
-      type: 'confirm',
-      default: false
-    }, {
-      name: 'contributeFile',
-      message: 'Do you have a CONTRIBUTE.md file?',
-      type: 'confirm',
-      default: false
-    }, {
       name: 'prs',
-      message: 'Are PRs accepted?',
+      message: 'Are PRs accepted? If true, adds a Contribute section with default guidelines.',
       type: 'confirm',
       default: true
     }, {
@@ -85,23 +75,22 @@ module.exports = yeoman.Base.extend({
       when: x => !x.mit
     }, {
       name: 'licensee',
-      message: 'Who is the License holder (probably your name)?',
+      message: 'Who is the license holder (probably AffiniPay LLC)?',
       type: 'input',
       validate: x => x.length !== 0 ? true : 'You must attribute the license to someone.'
     }], props => {
       const tpl = {
         API: props.API,
         background: props.background,
+        configuration: props.configuration,
         badge: props.badge,
         badges: props.badges,
         banner: props.banner,
         bannerPath: props.bannerPath,
-        contributeFile: props.contributeFile,
         description: props.description,
         license: props.license,
         licensee: props.licensee,
-        longDescription: props.longDescription,
-        maintainers: props.maintainers,
+        overview: props.overview,
         mit: props.mit,
         moduleName: props.moduleName,
         prs: props.prs,

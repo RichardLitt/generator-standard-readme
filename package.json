@@ -1,5 +1,5 @@
 {
-  "name": "generator-standard-readme",
+  "name": "generator-make-readme",
   "version": "0.1.1",
   "description": "Scaffold out a Standard Readme",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "name": "Jeff Matthews"
   },
   "bin": {
-    "standard-readme": "app/bin.js"
+    "make-readme": "app/bin.js"
   },
   "scripts": {
     "lint": "standard",
