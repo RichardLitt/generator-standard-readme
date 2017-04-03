@@ -9,12 +9,12 @@ module.exports = yeoman.Base.extend({
 
     this.prompt([{
       name: 'moduleName',
-      message: 'What is the name of your module?',
+      message: 'What is the name of your project?',
       default: this.appname.replace(/\s/g, '-'),
       filter: x => _s.slugify(x)
     }, {
       name: 'description',
-      message: 'Write a short one-liner describing your module:',
+      message: 'Summarize yyour project in one sentence:',
       store: true,
       validate: x => x.length > 0 ? true : 'You must provide a description.'
     }, {

@@ -80,4 +80,4 @@ _The API section should detail the module's objects and functions, their signatu
 
 ## License
 
-<% if (mit) { %>![MIT](./LICENSE)<% } %><% if (license) { %><% license %><% } %> © <%= licensee %>
+<% if (mit) { %>[MIT](./LICENSE)<% } %><% if (license) { %><% license %><% } %> © <%= licensee %>
