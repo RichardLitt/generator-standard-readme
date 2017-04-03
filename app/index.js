@@ -26,7 +26,9 @@ module.exports = yeoman.Base.extend({
       name: 'bannerPath',
       message: 'Where is the banner image? Ex: \'img/banner.png\'',
       type: 'input',
-      when: (answers) => answers.banner
+      when: function (answers) {
+        return answers.banner;
+      }
     }, {
       name: 'badge',
       message: 'Do you want a standard-readme compliant badge?',
@@ -77,6 +79,7 @@ module.exports = yeoman.Base.extend({
       name: 'licensee',
       message: 'Who is the license holder (probably AffiniPay LLC)?',
       type: 'input',
+      default: 'AffiniPay LLC',
       validate: x => x.length !== 0 ? true : 'You must attribute the license to someone.'
     }], props => {
       const tpl = {

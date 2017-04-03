@@ -31,41 +31,41 @@ _If your module depends on important but not widely known abstractions or other 
 ## Installation
 _Don't forget to include system prerequisites. Even simple npm installation instructions belong in this section. For example:_
 
-This module is written in Node.js, which must be installed prior to use. Node.js includes the Node Package Manager (NPM), which is used for installing dependencies.
+>This module is written in Node.js, which must be installed prior to use. Node.js includes the Node >Package Manager (NPM), which is used for installing dependencies.
 
-After cloning the repository, install dependencies and build:
-```
-$ npm install
-```
+>After cloning the repository, install dependencies and build:
+>```
+>$ npm install
+>```
 
-After building, you can install the tool globally to run it from anywhere:
-```
-$ npm install --global
-```
+>After building, you can install the tool globally to run it from anywhere:
+>```
+>$ npm install --global
+>```
 
 <% if (configuration) { %>## Configuration
-_If your module requires configuration before developers can use it, explain it in this section._
+_If your module requires configuration before developers can use it, explain it in this section. For example:_
 
-1. Contact AffiniPay Support to create a partner OAuth2 application.
-2. Configure OAuth and Redirect URI
-3. Retrieve your AffiniPay Partner Application Client ID and Secret
+>1. Contact AffiniPay Support to create a partner OAuth2 application.
+>2. Configure OAuth and Redirect URI
+>3. Retrieve your AffiniPay Partner Application Client ID and Secret
 <% } %>
 
 ## Usage
-_Show developers what a module looks like in action so they can quickly determine whether the example meets their needs. This section should contain clear, runnable code examples._
-```
-$ virtsecgroup --help
+_Show developers what a module looks like in action so they can quickly determine whether the example meets their needs. This section should contain clear, runnable code examples. For example:_
+>```
+>$ virtsecgroup --help
 
-  Usage: index [options] [input-file]
+>  Usage: index [options] [input-file]
 
-  Options:
+>  Options:
 
-    -h, --help                  output usage information
-    --dump-ast                  Dump parse AST
-    --dump-charts-on-error      Dump parse charts if an error occurs
-    -o, --output <output-file>  Specify the Terraform output filename
-    -v, --verbose               Increase verbosity of output
-```
+>    -h, --help                  output usage information
+>    --dump-ast                  Dump parse AST
+>    --dump-charts-on-error      Dump parse charts if an error occurs
+>    -o, --output <output-file>  Specify the Terraform output filename
+>    -v, --verbose               Increase verbosity of output
+>```
 
 <% if (API) { %>## API
 _The API section should detail the module's objects and functions, their signatures, return types, callbacks, and events in detail. Types should be included where they aren't obvious. Caveats should be made clear._
@@ -80,4 +80,4 @@ _The API section should detail the module's objects and functions, their signatu
 
 ## License
 
-<% if (mit) { %>MIT<% } %><% if (license) { %><% license %><% } %> © <%= licensee %>
+<% if (mit) { %>![MIT](./LICENSE)<% } %><% if (license) { %><% license %><% } %> © <%= licensee %>
