@@ -14,8 +14,10 @@ _Explain what your module does in greater detail and why someone might want to u
 
 <% if (security) { %>- [Security](#security)
 <% } %><% if (background) { %>- [Background](#background)
-<% } %>- [Installation](#installation)<% if (configuration) { %>- [Configuration](#configuration)<% } %>
-- [Usage](#usage)<% if (API) { %>- [API](#api)<% } %>
+<% } %>- [Installation](#installation)<% if (configuration) { %>
+- [Configuration](#configuration)<% } %>
+- [Usage](#usage)
+<% if (API) { %>- [API](#api)<% } %>
 <% if (contribute) { %>- [Contribute](#contribute)<% } %>- [License](#license)
 
 <% if (security) { %>## Security
