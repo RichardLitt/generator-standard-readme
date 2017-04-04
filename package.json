@@ -1,6 +1,6 @@
 {
   "name": "generator-standard-readme",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Scaffold out a Standard Readme",
   "license": "MIT",
   "repository": {
@@ -50,7 +50,7 @@
     ]
   },
   "coordinates": [
-    -34.5859496,
-    -58.4324082
+    45.5168274,
+    -73.5747962
   ]
 }
