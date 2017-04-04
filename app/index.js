@@ -14,7 +14,7 @@ module.exports = yeoman.Base.extend({
       filter: x => _s.slugify(x)
     }, {
       name: 'description',
-      message: 'Summarize yyour project in one sentence:',
+      message: 'Summarize your project in one sentence:',
       store: true,
       validate: x => x.length > 0 ? true : 'You must provide a description.'
     }, {
