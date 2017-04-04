@@ -1,6 +1,6 @@
 {
   "name": "generator-make-readme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quickly generate standards-compliant READMEs for AffiniPay open source software projects",
   "license": "MIT",
   "repository": {
