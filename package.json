@@ -1,21 +1,19 @@
 {
-  "name": "generator-standard-readme",
+  "name": "generator-make-readme",
   "version": "0.1.1",
   "description": "Scaffold out a Standard Readme",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RichardLitt/generator-standard-readme.git"
+    "url": "https://github.com/jeff-matthews/generator-standard-readme.git"
   },
-  "homepage": "https://github.com/RichardLitt/generator-standard-readme",
-  "bugs": "https://github.com/RichardLitt/generator-standard-readme/issues",
+  "homepage": "https://github.com/jeff-matthews/generator-standard-readme",
+  "bugs": "https://github.com/jeff-matthews/generator-standard-readme/issues",
   "author": {
-    "name": "Richard Littauer",
-    "email": "richard.littauer@gmail.com",
-    "url": "burntfen.com"
+    "name": "Jeff Matthews"
   },
   "bin": {
-    "standard-readme": "app/bin.js"
+    "make-readme": "app/bin.js"
   },
   "scripts": {
     "lint": "standard",
