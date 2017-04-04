@@ -16,6 +16,7 @@ TODO: Put more badges here.<% } %>
 <% } %>- [Install](#install)
 - [Usage](#usage)
 <% if (API) { %>- [API](#api)
+<% } %><% if (maintainers) { %>- [Maintainers](#maintainers)
 <% } %>- [Contribute](#contribute)
 - [License](#license)
 
@@ -34,6 +35,8 @@ TODO: Put more badges here.<% } %>
 ```
 
 <% if (API) { %>## API
+
+<% } %><% if (maintainers) { %>## Maintainers
 
 <% } %>## Contribute
 

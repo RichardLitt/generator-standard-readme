@@ -64,6 +64,7 @@ This will write a file, `readme.md`, to the local directory.
 - Do you need a prioritized security section?
 - Do you need a background section?
 - Do you need an API section?
+- Do you need a Maintainers section?
 - Do you have a CONTRIBUTE.md file?
 - Are PRs accepted?
 - Is an MIT license OK?

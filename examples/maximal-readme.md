@@ -16,6 +16,7 @@ TODO: Fill out this long description.
 - [Install](#install)
 - [Usage](#usage)
 - [API](#api)
+- [Maintainers](#maintainers)
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -34,6 +35,8 @@ TODO: Fill out this long description.
 ```
 
 ## API
+
+## Maintainers
 
 ## Contribute
 
