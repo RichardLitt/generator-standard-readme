@@ -35,6 +35,30 @@ test.serial('generates default file', async () => {
   assert.fileContent('README.md', fs.readFileSync('../examples/default-readme.md').toString())
 })
 
+test.serial('generates different as given license', async () => {
+   helpers.mockPrompt(generator, {
+     licensee: 'Richard McRichface',
+     mit: false,
+     license: 'CC-BY-SA 3.0'
+   })
+
+   await pify(generator.run.bind(generator))()
+
+   assert.fileContent('README.md', fs.readFileSync('../examples/default-readme.md').toString())
+ })
+
+ test.serial('defaults to MIT license', async () => {
+   helpers.mockPrompt(generator, {
+     licensee: 'Richard McRichface',
+     mit: true,
+     license: 'CC-BY-SA 3.0'
+   })
+
+   await pify(generator.run.bind(generator))()
+
+   assert.fileContent('README.md', fs.readFileSync('../examples/different-license-readme.md').toString())
+ +})
+
 test.serial('generates maximal file', async () => {
   helpers.mockPrompt(generator, {
     API: true,
@@ -59,4 +83,3 @@ test.serial('generates maximal file', async () => {
 
   assert.fileContent('README.md', fs.readFileSync('../examples/maximal-readme.md').toString())
 })
-

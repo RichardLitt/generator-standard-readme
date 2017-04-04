@@ -73,7 +73,9 @@ module.exports = yeoman.Base.extend({
       name: 'license',
       message: 'What is your license?',
       type: 'input',
-      default: 'MIT',
+      validate: function (val) {
+        return val.length > 0 ? true : 'You must provide a license.'
+      },
       when: x => !x.mit
     }, {
       name: 'licensee',
