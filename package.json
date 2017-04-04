@@ -1,14 +1,14 @@
 {
   "name": "generator-make-readme",
-  "version": "0.1.1",
-  "description": "Scaffold out a Standard Readme",
+  "version": "1.0.0",
+  "description": "Quickly generate standards-compliant READMEs for AffiniPay open source software projects",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/jeff-matthews/generator-standard-readme.git"
   },
-  "homepage": "https://github.com/jeff-matthews/generator-standard-readme",
-  "bugs": "https://github.com/jeff-matthews/generator-standard-readme/issues",
+  "homepage": "https://github.com/jeff-matthews/generator-make-readme",
+  "bugs": "https://github.com/jeff-matthews/generator-make-readme/issues",
   "author": {
     "name": "Jeff Matthews"
   },
