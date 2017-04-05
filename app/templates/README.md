@@ -48,4 +48,4 @@ Small note: If editing the README, please conform to the [standard-readme](https
 
 ## License
 
-<% if (mit) { %>MIT<% } %><% if (license) { %><%= license %><% } %> © <%= licensee %>
+<% if (mit) { %>MIT<% } %><% if (!mit && license) { %><%= license %><% } %> © <%= licensee %>

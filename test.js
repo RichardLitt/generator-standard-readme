@@ -44,7 +44,7 @@ test.serial('generates different as given license', async () => {
 
   await pify(generator.run.bind(generator))()
 
-  assert.fileContent('README.md', fs.readFileSync('../examples/default-readme.md').toString())
+  assert.fileContent('README.md', fs.readFileSync('../examples/different-license-readme.md').toString())
 })
 
 test.serial('defaults to MIT license', async () => {
@@ -56,7 +56,7 @@ test.serial('defaults to MIT license', async () => {
 
   await pify(generator.run.bind(generator))()
 
-  assert.fileContent('README.md', fs.readFileSync('../examples/different-license-readme.md').toString())
+  assert.fileContent('README.md', fs.readFileSync('../examples/default-readme.md').toString())
 })
 
 test.serial('generates maximal file', async () => {
