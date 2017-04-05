@@ -9,7 +9,7 @@ module.exports = yeoman.Base.extend({
 
     this.prompt([{
       name: 'moduleName',
-      message: 'What do you want to name your module?',
+      message: 'What is the name of your module?',
       default: this.appname.replace(/\s/g, '-'),
       filter: x => _s.slugify(x)
     }, {
