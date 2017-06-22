@@ -27,7 +27,8 @@ test.serial('generates expected files', async () => {
 
 test.serial('generates default file', async () => {
   helpers.mockPrompt(generator, {
-    licensee: 'Richard McRichface'
+    licensee: 'Richard McRichface',
+    maintainers: 'RichardLitt'
   })
 
   await pify(generator.run.bind(generator))()
@@ -37,6 +38,7 @@ test.serial('generates default file', async () => {
 
 test.serial('generates different as given license', async () => {
   helpers.mockPrompt(generator, {
+    maintainers: 'RichardLitt',
     licensee: 'Richard McRichface',
     mit: false,
     license: 'CC-BY-SA 3.0'
@@ -49,6 +51,7 @@ test.serial('generates different as given license', async () => {
 
 test.serial('defaults to MIT license', async () => {
   helpers.mockPrompt(generator, {
+    maintainers: 'RichardLitt',
     licensee: 'Richard McRichface',
     mit: true,
     license: 'CC-BY-SA 3.0'
@@ -72,7 +75,7 @@ test.serial('generates maximal file', async () => {
     license: 'test',
     licensee: 'Richard McRichface',
     longDescription: true,
-    maintainers: true,
+    maintainers: 'RichardLitt',
     mit: true,
     moduleName: 'example',
     prs: true,

@@ -38,6 +38,8 @@ TODO: Fill out this long description.
 
 ## Maintainers
 
+[@RichardLitt](https://github.com/RichardLitt)
+
 ## Contribute
 
 See [the contribute file](contribute.md)!
