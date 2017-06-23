@@ -15,7 +15,10 @@ test.beforeEach(async () => {
 test.serial('generates expected files', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
-    description: 'test'
+    description: 'test',
+    maintainers: 'RichardLitt',
+    year: false,
+    diffYear: 2017
   })
 
   await pify(generator.run.bind(generator))()
@@ -28,7 +31,9 @@ test.serial('generates expected files', async () => {
 test.serial('generates default file', async () => {
   helpers.mockPrompt(generator, {
     licensee: 'Richard McRichface',
-    maintainers: 'RichardLitt'
+    maintainers: 'RichardLitt',
+    year: false,
+    diffYear: 2017
   })
 
   await pify(generator.run.bind(generator))()
@@ -41,7 +46,9 @@ test.serial('generates different as given license', async () => {
     maintainers: 'RichardLitt',
     licensee: 'Richard McRichface',
     mit: false,
-    license: 'CC-BY-SA 3.0'
+    license: 'CC-BY-SA 3.0',
+    year: false,
+    diffYear: 2017
   })
 
   await pify(generator.run.bind(generator))()
@@ -54,12 +61,28 @@ test.serial('defaults to MIT license', async () => {
     maintainers: 'RichardLitt',
     licensee: 'Richard McRichface',
     mit: true,
-    license: 'CC-BY-SA 3.0'
+    license: 'CC-BY-SA 3.0',
+    year: false,
+    diffYear: 2017
   })
 
   await pify(generator.run.bind(generator))()
 
   assert.fileContent('README.md', fs.readFileSync('../examples/default-readme.md').toString())
+})
+
+test.serial('generates different year if given', async () => {
+  helpers.mockPrompt(generator, {
+    maintainers: 'RichardLitt',
+    licensee: 'Richard McRichface',
+    mit: true,
+    year: false,
+    diffYear: 2016
+  })
+
+  await pify(generator.run.bind(generator))()
+
+  assert.fileContent('README.md', fs.readFileSync('../examples/different-year.md').toString())
 })
 
 test.serial('generates maximal file', async () => {
@@ -79,7 +102,8 @@ test.serial('generates maximal file', async () => {
     mit: true,
     moduleName: 'example',
     prs: true,
-    security: true
+    security: true,
+    year: 2017
   })
 
   await pify(generator.run.bind(generator))()
