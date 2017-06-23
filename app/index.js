@@ -93,6 +93,18 @@ module.exports = yeoman.Base.extend({
       message: 'Who is the License holder (probably your name)?',
       type: 'input',
       validate: x => x.length !== 0 ? true : 'You must attribute the license to someone.'
+    }, {
+      name: 'year',
+      message: 'Use the current year?',
+      type: 'confirm',
+      default: true
+    }, {
+      name: 'diffYear',
+      message: 'What years would you like to specify?',
+      type: 'input',
+      validate: function (val) {
+        return val
+      }
     }], props => {
       const tpl = {
         API: props.API,
@@ -110,7 +122,9 @@ module.exports = yeoman.Base.extend({
         mit: props.mit,
         moduleName: props.moduleName,
         prs: props.prs,
-        security: props.security
+        security: props.security,
+        year: props.year,
+        diffYear: props.diffYear
       }
 
       self.fs.copyTpl([

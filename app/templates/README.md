@@ -50,4 +50,4 @@ Small note: If editing the README, please conform to the [standard-readme](https
 
 ## License
 
-<% if (mit) { %>MIT<% } %><% if (!mit && license) { %><%= license %><% } %> © <%= licensee %>
+<% if (mit) { %>MIT<% } %><% if (!mit && license) { %><%= license %><% } %> © <% if (year) { %><%= new Date().getFullYear() %><% } else { %><%= diffYear %><% } %> <%= licensee %>
