@@ -10,6 +10,7 @@ TODO: Fill out this long description.
 
 - [Install](#install)
 - [Usage](#usage)
+- [Maintainers](#maintainers)
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -22,6 +23,10 @@ TODO: Fill out this long description.
 
 ```
 ```
+
+## Maintainers
+
+[@RichardLitt](https://github.com/RichardLitt)
 
 ## Contribute
 

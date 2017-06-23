@@ -59,9 +59,12 @@ module.exports = yeoman.Base.extend({
       default: false
     }, {
       name: 'maintainers',
-      message: 'Do you need a Maintainers section?',
-      type: 'confirm',
-      default: false
+      message: 'What is the GitHub handle of the main maintainer?',
+      type: 'input',
+      validate: function (val) {
+        return val.length > 0 ? true : 'You must name a maintainer.'
+      },
+      when: x => !x.mit
     }, {
       name: 'contributeFile',
       message: 'Do you have a CONTRIBUTE.md file?',

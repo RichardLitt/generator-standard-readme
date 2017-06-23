@@ -36,9 +36,11 @@ TODO: Put more badges here.<% } %>
 
 <% if (API) { %>## API
 
-<% } %><% if (maintainers) { %>## Maintainers
+<% } %>## Maintainers
 
-<% } %>## Contribute
+[@<%= maintainers %>](https://github.com/<%= maintainers %>)
+
+## Contribute
 
 <% if (contributeFile) { %>See [the contribute file](contribute.md)!
 
