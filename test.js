@@ -16,6 +16,7 @@ test.serial('generates expected files', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
     description: 'test',
+    maintainers: 'RichardLitt',
     year: false,
     diffYear: 2017
   })
@@ -72,6 +73,7 @@ test.serial('defaults to MIT license', async () => {
 
 test.serial('generates different year if given', async () => {
   helpers.mockPrompt(generator, {
+    maintainers: 'RichardLitt',
     licensee: 'Richard McRichface',
     mit: true,
     year: false,
