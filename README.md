@@ -49,12 +49,18 @@ This will write a file, `readme.md`, to the local directory.
 - Do you need a prioritized security section?
 - Do you need a background section?
 - Do you need an API section?
-- Do you need a Maintainers section?
+- What is the GitHub handle of the main maintainer?
 - Do you have a CONTRIBUTE.md file?
 - Are PRs accepted?
 - Is an MIT license OK?
   - What is your license?
 - Who is the License holder (probably your name)?
+- Use the current year?
+  - What years would you like to specify?
+
+## Maintainer
+
+[@RichardLitt](https://github.com/RichardLitt)
 
 ## Contribute
 
