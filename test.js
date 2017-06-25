@@ -85,6 +85,20 @@ test.serial('generates different year if given', async () => {
   assert.fileContent('README.md', fs.readFileSync('../examples/different-year.md').toString())
 })
 
+test.serial('does not generate different year if present year is confirmed', async () => {
+  helpers.mockPrompt(generator, {
+    maintainers: 'RichardLitt',
+    licensee: 'Richard McRichface',
+    mit: true,
+    year: true,
+    diffYear: 2016
+  })
+
+  await pify(generator.run.bind(generator))()
+
+  assert.fileContent('README.md', fs.readFileSync('../examples/default-readme.md').toString())
+})
+
 test.serial('generates maximal file', async () => {
   helpers.mockPrompt(generator, {
     API: true,

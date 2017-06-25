@@ -104,7 +104,8 @@ module.exports = yeoman.Base.extend({
       type: 'input',
       validate: function (val) {
         return val
-      }
+      },
+      when: x => !x.year
     }], props => {
       const tpl = {
         API: props.API,
