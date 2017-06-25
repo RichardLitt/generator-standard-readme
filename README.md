@@ -11,7 +11,6 @@ Tip: Use [chalk](https://github.com/sindresorhus/chalk) if you want colors in yo
 ## Table of Contents
 
 - [Install](#install)
-  - [With Yeoman](#with-yeoman)
 - [Usage](#usage)
   - [Fields to fill out](#fields-to-fill-out)
 - [Contribute](#contribute)
@@ -21,27 +20,13 @@ Tip: Use [chalk](https://github.com/sindresorhus/chalk) if you want colors in yo
 
 This generator requires [node](https://nodejs.org), [npm](https://npmjs.com), and [yeoman](http://yeoman.io/).
 
-You can install it by itself by running:
+You can install it by running:
 
 ```sh
-npm install --global generator-standard-readme
+npm install --global yo generator-standard-readme
 ```
-
-### With Yeoman
-
-You can also install it as a standard yeoman generator, by installing `yo` as well:
-
-```
-npm install --global yo
-```
-
-However, this isn't necessary.
 
 ## Usage
-
-```
-$ standard-readme
-```
 
 With [yo](https://github.com/yeoman/yo):
 
