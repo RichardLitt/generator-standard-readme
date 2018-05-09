@@ -1,6 +1,7 @@
 # generator-standard-readme
 
 [![Build Status](https://travis-ci.org/RichardLitt/generator-standard-readme.svg?branch=master)](https://travis-ci.org/RichardLitt/generator-standard-readme)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FRichardLitt%2Fgenerator-standard-readme.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FRichardLitt%2Fgenerator-standard-readme?ref=badge_shield)
 
 > Scaffold out a Standard Readme
 
@@ -57,6 +58,9 @@ This will write a file, `readme.md`, to the local directory.
 - Who is the License holder (probably your name)?
 - Use the current year?
   - What years would you like to specify?
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FRichardLitt%2Fgenerator-standard-readme.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FRichardLitt%2Fgenerator-standard-readme?ref=badge_large)
 
 ## Maintainer
 
