@@ -11,7 +11,7 @@ TODO: Fill out this long description.
 - [Install](#install)
 - [Usage](#usage)
 - [Maintainers](#maintainers)
-- [Contribute](#contribute)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Install
@@ -28,7 +28,7 @@ TODO: Fill out this long description.
 
 [@RichardLitt](https://github.com/RichardLitt)
 
-## Contribute
+## Contributing
 
 PRs accepted.
 

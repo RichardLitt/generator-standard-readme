@@ -17,7 +17,7 @@ TODO: Fill out this long description.
 - [Usage](#usage)
 - [API](#api)
 - [Maintainers](#maintainers)
-- [Contribute](#contribute)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Security
@@ -40,9 +40,9 @@ TODO: Fill out this long description.
 
 [@RichardLitt](https://github.com/RichardLitt)
 
-## Contribute
+## Contributing
 
-See [the contribute file](contribute.md)!
+See [the contributing file](contributing.md)!
 
 PRs accepted.
 

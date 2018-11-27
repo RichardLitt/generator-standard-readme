@@ -107,7 +107,7 @@ test.serial('generates maximal file', async () => {
     badges: true,
     banner: true,
     bannerPath: 'test',
-    contributeFile: true,
+    contributingFile: true,
     description: 'test',
     license: 'test',
     licensee: 'Richard McRichface',

@@ -17,7 +17,7 @@ TODO: Put more badges here.<% } %>
 - [Usage](#usage)
 <% if (API) { %>- [API](#api)
 <% } %><% if (maintainers) { %>- [Maintainers](#maintainers)
-<% } %>- [Contribute](#contribute)
+<% } %>- [Contributing](#contributing)
 - [License](#license)
 
 <% if (security) { %>## Security
@@ -40,9 +40,9 @@ TODO: Put more badges here.<% } %>
 
 [@<%= maintainers %>](https://github.com/<%= maintainers %>)
 
-## Contribute
+## Contributing
 
-<% if (contributeFile) { %>See [the contribute file](contribute.md)!
+<% if (contributingFile) { %>See [the contributing file](contributing.md)!
 
 <% } %><% if (prs) { %>PRs accepted.<% } %>
 

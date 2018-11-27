@@ -13,7 +13,7 @@ Tip: Use [chalk](https://github.com/sindresorhus/chalk) if you want colors in yo
 - [Install](#install)
 - [Usage](#usage)
   - [Fields to fill out](#fields-to-fill-out)
-- [Contribute](#contribute)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Install
@@ -50,7 +50,7 @@ This will write a file, `readme.md`, to the local directory.
 - Do you need a background section?
 - Do you need an API section?
 - What is the GitHub handle of the main maintainer?
-- Do you have a CONTRIBUTE.md file?
+- Do you have a CONTRIBUTING.md file?
 - Are PRs accepted?
 - Is an MIT license OK?
   - What is your license?
@@ -62,9 +62,9 @@ This will write a file, `readme.md`, to the local directory.
 
 [@RichardLitt](https://github.com/RichardLitt)
 
-## Contribute
+## Contributing
 
-Please contribute! [Look at the issues](https://github.com/RichardLitt/generator-standard-readme/issues).
+Please contributing! [Look at the issues](https://github.com/RichardLitt/generator-standard-readme/issues).
 
 ## License
 

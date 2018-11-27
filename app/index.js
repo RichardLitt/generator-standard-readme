@@ -66,8 +66,8 @@ module.exports = yeoman.Base.extend({
       },
       when: x => !x.mit
     }, {
-      name: 'contributeFile',
-      message: 'Do you have a CONTRIBUTE.md file?',
+      name: 'contributingFile',
+      message: 'Do you have a CONTRIBUTING.md file?',
       type: 'confirm',
       default: false
     }, {
@@ -114,7 +114,7 @@ module.exports = yeoman.Base.extend({
         badges: props.badges,
         banner: props.banner,
         bannerPath: props.bannerPath,
-        contributeFile: props.contributeFile,
+        contributingFile: props.contributingFile,
         description: props.description,
         license: props.license,
         licensee: props.licensee,
