@@ -64,7 +64,7 @@ This will write a file, `readme.md`, to the local directory.
 
 ## Contributing
 
-Please contributing! [Look at the issues](https://github.com/RichardLitt/generator-standard-readme/issues).
+Please contribute! [Look at the issues](https://github.com/RichardLitt/generator-standard-readme/issues).
 
 ## License
 
