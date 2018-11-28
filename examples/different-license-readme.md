@@ -36,4 +36,4 @@ Small note: If editing the README, please conform to the [standard-readme](https
 
 ## License
 
-CC-BY-SA 3.0 © 2017 Richard McRichface
+CC-BY-SA 3.0 © 2018 Richard McRichface
