@@ -1,6 +1,6 @@
 # generator-standard-readme
 
-[![Build Status](https://travis-ci.org/RichardLitt/generator-standard-readme.svg?branch=master)](https://travis-ci.org/RichardLitt/generator-standard-readme) [![Greenkeeper badge](https://badges.greenkeeper.io/RichardLitt/generator-standard-readme.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/RichardLitt/generator-standard-readme.svg?branch=master)](https://travis-ci.org/RichardLitt/generator-standard-readme)
 
 > Scaffold out a Standard Readme
 

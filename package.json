@@ -29,15 +29,15 @@
   ],
   "dependencies": {
     "underscore.string": "^3.0.3",
-    "yeoman-environment": "^2.3.4",
-    "yeoman-generator": "^3.1.1"
+    "yeoman-environment": "^1.6.1",
+    "yeoman-generator": "^0.22.1"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
-    "babel-eslint": "^10.0.1",
-    "pify": "^4.0.1",
-    "standard": "^12.0.1",
-    "yeoman-assert": "^3.1.1",
+    "ava": "^0.15.2",
+    "babel-eslint": "^5.0.0-beta6",
+    "pify": "^2.2.0",
+    "standard": "^5.4.1",
+    "yeoman-assert": "^2.0.0",
     "yeoman-test": "^1.0.0"
   },
   "standard": {
