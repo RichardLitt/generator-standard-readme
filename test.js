@@ -9,7 +9,7 @@ let generator
 
 test.beforeEach(async () => {
   await pify(helpers.testDirectory)(path.join(__dirname, 'temp'))
-  generator = helpers.createGenerator('standard-readme:app', ['../app'], null, {skipInstall: true})
+  generator = helpers.createGenerator('standard-readme:app', ['../app'], null, { skipInstall: true })
 })
 
 test.serial('generates expected files', async () => {
