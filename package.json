@@ -33,7 +33,7 @@
     "yeoman-generator": "^0.22.1"
   },
   "devDependencies": {
-    "ava": "^0.15.2",
+    "ava": "^1.0.1",
     "babel-eslint": "^5.0.0-beta6",
     "pify": "^2.2.0",
     "standard": "^5.4.1",
