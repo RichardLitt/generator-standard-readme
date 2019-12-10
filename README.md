@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/RichardLitt/generator-standard-readme.svg?branch=master)](https://travis-ci.org/RichardLitt/generator-standard-readme)
 
-> Scaffold out a Standard Readme
+Scaffold out a Standard Readme
 
 This generator conforms to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification. It creates a minimally compliant standard readme for your cross-language project, with some options.
 
