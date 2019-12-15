@@ -29,7 +29,7 @@
   ],
   "dependencies": {
     "underscore.string": "^3.0.3",
-    "yeoman-environment": "^1.6.1",
+    "yeoman-environment": "^2.4.0",
     "yeoman-generator": "^0.22.1"
   },
   "devDependencies": {
