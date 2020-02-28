@@ -38,7 +38,7 @@
     "pify": "^2.2.0",
     "standard": "^13.0.1",
     "yeoman-assert": "^2.0.0",
-    "yeoman-test": "^1.0.0"
+    "yeoman-test": "^2.2.0"
   },
   "standard": {
     "parser": "babel-eslint",
