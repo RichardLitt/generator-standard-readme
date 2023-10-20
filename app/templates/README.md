@@ -26,19 +26,19 @@ TODO: Put more badges here.<% } %>
 
 <% } %>## Install
 
-```
+```sh
 ```
 
 ## Usage
 
-```
+```sh
 ```
 
 <% if (API) { %>## API
 
 <% } %>## Maintainers
 
-[@<%= maintainers %>](https://github.com/<%= maintainers %>)
+[@<%= maintainers %>](https://<% if (hostedGithub) { %>github.com<% } %><% if (!hostedGithub && hostedDomain) { %><%= hostedDomain %><% } %>/<%= maintainers %>)
 
 ## Contributing
 
@@ -46,7 +46,8 @@ TODO: Put more badges here.<% } %>
 
 <% } %><% if (prs) { %>PRs accepted.<% } %>
 
-Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+Small note: If editing the README, please conform to the
+[standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
