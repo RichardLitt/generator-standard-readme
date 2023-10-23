@@ -1,6 +1,7 @@
 'use strict'
 const yeoman = require('yeoman-generator')
 const _s = require('underscore.string')
+const domainRegex = /^(((?!-))(xn--|_)?[a-z0-9-]{0,61}[a-z0-9]{1,1}\.)*(xn--)?([a-z0-9][a-z0-9\-]{0,60}|[a-z0-9-]{1,30}\.[a-z]{2,})$/
 
 module.exports = yeoman.Base.extend({
   init () {
@@ -59,13 +60,26 @@ module.exports = yeoman.Base.extend({
       default: false
     }, {
       name: 'maintainers',
-      message: 'What is the GitHub handle of the main maintainer?',
+      message: 'What is the username of the main maintainer?',
       type: 'input',
       validate: function (val) {
         return val.length > 0 ? true : 'You must name a maintainer.'
       },
       when: x => !x.mit
     }, {
+      name: 'hostedGithub',
+      message: 'Is the project host on github.com?',
+      type: 'confirm',
+      default: true
+    },  {
+      name: 'hostedDomain',
+      message: 'Where is the project hosted?',
+      type: 'input',
+      validate: function (val) {
+        return domainRegex.test(val) ? true : 'You must enter a domain where the project is hosted.'
+      },
+      when: x => !x.hostedGithub
+    },{
       name: 'contributingFile',
       message: 'Do you have a CONTRIBUTING.md file?',
       type: 'confirm',
@@ -120,6 +134,8 @@ module.exports = yeoman.Base.extend({
         licensee: props.licensee,
         longDescription: props.longDescription,
         maintainers: props.maintainers,
+        hostedGithub: props.hostedGithub,
+        hostedDomain: props.hostedDomain,
         mit: props.mit,
         moduleName: props.moduleName,
         prs: props.prs,
