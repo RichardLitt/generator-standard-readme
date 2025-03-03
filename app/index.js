@@ -1,7 +1,7 @@
 'use strict'
 const yeoman = require('yeoman-generator')
 const _s = require('underscore.string')
-const domainRegex = /^(((?!-))(xn--|_)?[a-z0-9-]{0,61}[a-z0-9]{1,1}\.)*(xn--)?([a-z0-9][a-z0-9\-]{0,60}|[a-z0-9-]{1,30}\.[a-z]{2,})$/
+const domainRegex = /^(((?!-))(xn--|_)?[a-z0-9-]{0,61}[a-z0-9]{1,1}\.)*(xn--)?([a-z0-9][a-z0-9-]{0,60}|[a-z0-9-]{1,30}\.[a-z]{2,})$/
 
 module.exports = yeoman.Base.extend({
   init () {
@@ -71,7 +71,7 @@ module.exports = yeoman.Base.extend({
       message: 'Is the project host on github.com?',
       type: 'confirm',
       default: true
-    },  {
+    }, {
       name: 'hostedDomain',
       message: 'Where is the project hosted?',
       type: 'input',
@@ -79,7 +79,7 @@ module.exports = yeoman.Base.extend({
         return domainRegex.test(val) ? true : 'You must enter a domain where the project is hosted.'
       },
       when: x => !x.hostedGithub
-    },{
+    }, {
       name: 'contributingFile',
       message: 'Do you have a CONTRIBUTING.md file?',
       type: 'confirm',
