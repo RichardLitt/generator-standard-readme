@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "ava": "^0.15.2",
-    "babel-eslint": "^5.0.0-beta6",
+    "babel-eslint": "7.2.3",
     "pify": "^2.2.0",
     "standard": "^13.0.1",
     "yeoman-assert": "^2.0.0",
