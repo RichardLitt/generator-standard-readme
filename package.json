@@ -40,6 +40,7 @@
     "yeoman-assert": "^2.0.0",
     "yeoman-test": "^1.0.0"
   },
+  "packageManager": "npm@6.14.18+sha512.a774a3a927214ae35052a6c9060c1dbf42f73ba6ca91a49f42b43326cb2436934a2e0d20dfb739c535c55744aa4e55fd196be81b10442d524c456ab427ca1a2c",
   "standard": {
     "parser": "babel-eslint",
     "ignore": [
