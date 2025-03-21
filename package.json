@@ -16,7 +16,7 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "standard && ava"
+    "test": "standard && vitest"
   },
   "keywords": [
     "yeoman-generator",
@@ -27,22 +27,19 @@
     "readme",
     "standard"
   ],
+  "main": "app/index.js",
   "dependencies": {
-    "underscore.string": "^3.0.3",
-    "yeoman-environment": "^1.6.1",
-    "yeoman-generator": "^0.22.1"
+    "underscore.string": "^3.3.6",
+    "yeoman-environment": "^4.4.3",
+    "yeoman-generator": "^7.5.1"
   },
   "devDependencies": {
-    "ava": "^0.15.2",
-    "babel-eslint": "7.2.3",
-    "pify": "^2.2.0",
-    "standard": "^13.0.1",
-    "yeoman-assert": "^2.0.0",
-    "yeoman-test": "^1.0.0"
+    "standard": "^17.1.2",
+    "vitest": "^3.0.9",
+    "yeoman-test": "^10.1.0"
   },
-  "packageManager": "npm@6.14.18+sha512.a774a3a927214ae35052a6c9060c1dbf42f73ba6ca91a49f42b43326cb2436934a2e0d20dfb739c535c55744aa4e55fd196be81b10442d524c456ab427ca1a2c",
+  "packageManager": "npm@11.2.0",
   "standard": {
-    "parser": "babel-eslint",
     "ignore": [
       "app/templates/"
     ]

@@ -1,14 +1,11 @@
 'use strict'
-const yeoman = require('yeoman-generator')
+const Generator = require('yeoman-generator').default
 const _s = require('underscore.string')
 const domainRegex = /^(((?!-))(xn--|_)?[a-z0-9-]{0,61}[a-z0-9]{1,1}\.)*(xn--)?([a-z0-9][a-z0-9-]{0,60}|[a-z0-9-]{1,30}\.[a-z]{2,})$/
 
-module.exports = yeoman.Base.extend({
-  init () {
-    const cb = this.async()
-    const self = this
-
-    this.prompt([{
+module.exports = class StandardReadmeGenerator extends Generator {
+  async prompting () {
+    this.props = await this.prompt([{
       name: 'moduleName',
       message: 'What is the name of your module?',
       default: this.appname.replace(/\s/g, '-'),
@@ -62,7 +59,7 @@ module.exports = yeoman.Base.extend({
       name: 'maintainers',
       message: 'What is the username of the main maintainer?',
       type: 'input',
-      validate: function (val) {
+      validate: (val) => {
         return val.length > 0 ? true : 'You must name a maintainer.'
       },
       when: x => !x.mit
@@ -75,7 +72,7 @@ module.exports = yeoman.Base.extend({
       name: 'hostedDomain',
       message: 'Where is the project hosted?',
       type: 'input',
-      validate: function (val) {
+      validate: (val) => {
         return domainRegex.test(val) ? true : 'You must enter a domain where the project is hosted.'
       },
       when: x => !x.hostedGithub
@@ -98,7 +95,7 @@ module.exports = yeoman.Base.extend({
       name: 'license',
       message: 'What is your license?',
       type: 'input',
-      validate: function (val) {
+      validate: (val) => {
         return val.length > 0 ? true : 'You have to provide a license'
       },
       when: x => !x.mit
@@ -116,41 +113,18 @@ module.exports = yeoman.Base.extend({
       name: 'diffYear',
       message: 'What years would you like to specify?',
       type: 'input',
-      validate: function (val) {
+      validate: (val) => {
         return val
       },
       when: x => !x.year
-    }], props => {
-      const tpl = {
-        API: props.API,
-        background: props.background,
-        badge: props.badge,
-        badges: props.badges,
-        banner: props.banner,
-        bannerPath: props.bannerPath,
-        contributingFile: props.contributingFile,
-        description: props.description,
-        license: props.license,
-        licensee: props.licensee,
-        longDescription: props.longDescription,
-        maintainers: props.maintainers,
-        hostedGithub: props.hostedGithub,
-        hostedDomain: props.hostedDomain,
-        mit: props.mit,
-        moduleName: props.moduleName,
-        prs: props.prs,
-        security: props.security,
-        year: props.year,
-        diffYear: props.diffYear
-      }
+    }])
+  }
 
-      self.fs.copyTpl([
-        `${self.templatePath()}/README.md`
-      ], self.destinationPath(), tpl)
-
-      cb()
-    })
-  },
-  git () {},
-  install () {}
-})
+  writing () {
+    this.fs.copyTpl(
+      this.templatePath('README.md'),
+      this.destinationPath('README.md'),
+      this.props
+    )
+  }
+}

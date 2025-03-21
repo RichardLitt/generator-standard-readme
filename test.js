@@ -1,118 +1,127 @@
-import path from 'path'
-import test from 'ava'
-import helpers from 'yeoman-test'
-import assert from 'yeoman-assert'
-import pify from 'pify'
-import fs from 'graceful-fs'
+import assert from 'node:assert/strict'
+import { existsSync, mkdirSync, readFileSync } from 'node:fs'
+import { join } from 'node:path'
+import { beforeEach, describe, test } from 'vitest'
+import helpers, { result } from 'yeoman-test'
 
-let generator
+describe('standard-readme:app', async () => {
+  const customTempDir = join(__dirname, './temp')
+  const exampleDir = join(__dirname, './examples')
+  if (!existsSync(customTempDir)) {
+    mkdirSync(customTempDir, { recursive: true })
+  }
 
-test.beforeEach(async () => {
-  await pify(helpers.testDirectory)(path.join(__dirname, 'temp'))
-  generator = helpers.createGenerator('standard-readme:app', ['../app'], null, { skipInstall: true })
-})
+  /** @type {import('yeoman-test').RunContext} */
+  let runContext
 
-test.serial('generates expected files', async () => {
-  helpers.mockPrompt(generator, {
-    moduleName: 'test',
-    description: 'test',
-    maintainers: 'RichardLitt'
+  beforeEach(async () => {
+    await helpers
+      .prepareTemporaryDir({
+        cwd: customTempDir
+      })
+    runContext = result
+      .create(join(__dirname, './app'))
+      .withAnswers({
+        description: 'test',
+        maintainers: 'RichardLitt',
+        licensee: 'Richard McRichface'
+      })
   })
 
-  await pify(generator.run.bind(generator))()
+  test('generates default README file with current year', async () => {
+    await runContext
+      .run()
 
-  assert.file([
-    'README.md'
-  ])
-})
-
-test.serial('generates default file', async () => {
-  helpers.mockPrompt(generator, {
-    licensee: 'Richard McRichface',
-    maintainers: 'RichardLitt'
+    assert.strictEqual(
+      readFileSync(join(customTempDir, 'README.md')).toString(),
+      readFileSync(join(exampleDir, 'default-readme.md')).toString()
+        .replace('2018', new Date().getFullYear())
+    )
   })
 
-  await pify(generator.run.bind(generator))()
+  test('generates README with different year', async () => {
+    await runContext
+      .withAnswers({
+        year: false,
+        diffYear: '2016'
+      })
+      .run()
 
-  assert.fileContent('README.md', fs.readFileSync('../examples/default-readme.md').toString())
-})
-
-test.serial('generates different as given license', async () => {
-  helpers.mockPrompt(generator, {
-    maintainers: 'RichardLitt',
-    licensee: 'Richard McRichface',
-    mit: false,
-    license: 'CC-BY-SA 3.0'
+    assert.strictEqual(
+      readFileSync(join(customTempDir, 'README.md')).toString(),
+      readFileSync(join(exampleDir, 'different-year.md')).toString()
+    )
   })
 
-  await pify(generator.run.bind(generator))()
+  test('generates README without different year when present year is confirmed', async () => {
+    await runContext
+      .withAnswers({
+        year: true,
+        diffYear: 2016
+      })
+      .run()
 
-  assert.fileContent('README.md', fs.readFileSync('../examples/different-license-readme.md').toString())
-})
-
-test.serial('defaults to MIT license', async () => {
-  helpers.mockPrompt(generator, {
-    maintainers: 'RichardLitt',
-    licensee: 'Richard McRichface',
-    mit: true,
-    license: 'CC-BY-SA 3.0'
+    assert.strictEqual(
+      readFileSync(join(customTempDir, 'README.md')).toString(),
+      readFileSync(join(exampleDir, 'default-readme.md')).toString()
+        .replace('2018', new Date().getFullYear())
+    )
   })
 
-  await pify(generator.run.bind(generator))()
+  test('generates README with given license', async () => {
+    await runContext
+      .withAnswers({
+        mit: false,
+        license: 'CC-BY-SA 3.0'
+      })
+      .run()
 
-  assert.fileContent('README.md', fs.readFileSync('../examples/default-readme.md').toString())
-})
-
-test.serial('generates different year if given', async () => {
-  helpers.mockPrompt(generator, {
-    maintainers: 'RichardLitt',
-    licensee: 'Richard McRichface',
-    mit: true,
-    year: false,
-    diffYear: 2016
+    assert.strictEqual(
+      readFileSync(join(customTempDir, 'README.md')).toString(),
+      readFileSync(join(exampleDir, 'different-license-readme.md')).toString()
+        .replace('2018', new Date().getFullYear())
+    )
   })
 
-  await pify(generator.run.bind(generator))()
+  test('generates README defaulting to MIT license', async () => {
+    await runContext
+      .withAnswers({
+        mit: true,
+        license: 'CC-BY-SA 3.0'
+      })
+      .run()
 
-  assert.fileContent('README.md', fs.readFileSync('../examples/different-year.md').toString())
-})
-
-test.serial('does not generate different year if present year is confirmed', async () => {
-  helpers.mockPrompt(generator, {
-    maintainers: 'RichardLitt',
-    licensee: 'Richard McRichface',
-    mit: true,
-    year: true,
-    diffYear: 2016
+    assert.strictEqual(
+      readFileSync(join(customTempDir, 'README.md')).toString(),
+      readFileSync(join(exampleDir, 'default-readme.md')).toString()
+        .replace('2018', new Date().getFullYear())
+    )
   })
 
-  await pify(generator.run.bind(generator))()
+  test('generates maximal README', async () => {
+    await runContext
+      .withAnswers({
+        API: true,
+        background: true,
+        badge: true,
+        badges: true,
+        banner: true,
+        bannerPath: 'test',
+        contributingFile: true,
+        license: 'test',
+        longDescription: true,
+        mit: true,
+        moduleName: 'example',
+        prs: true,
+        security: true,
+        year: true
+      })
+      .run()
 
-  assert.fileContent('README.md', fs.readFileSync('../examples/default-readme.md').toString())
-})
-
-test.serial('generates maximal file', async () => {
-  helpers.mockPrompt(generator, {
-    API: true,
-    background: true,
-    badge: true,
-    badges: true,
-    banner: true,
-    bannerPath: 'test',
-    contributingFile: true,
-    description: 'test',
-    license: 'test',
-    licensee: 'Richard McRichface',
-    longDescription: true,
-    maintainers: 'RichardLitt',
-    mit: true,
-    moduleName: 'example',
-    prs: true,
-    security: true,
-    year: true
+    assert.strictEqual(
+      readFileSync(join(customTempDir, 'README.md')).toString(),
+      readFileSync(join(exampleDir, 'maximal-readme.md')).toString()
+        .replace('2018', new Date().getFullYear())
+    )
   })
-
-  await pify(generator.run.bind(generator))()
-
-  assert.fileContent('README.md', fs.readFileSync('../examples/maximal-readme.md').toString())
 })
