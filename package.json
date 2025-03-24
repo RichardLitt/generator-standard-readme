@@ -27,6 +27,7 @@
     "readme",
     "standard"
   ],
+  "type": "module",
   "main": "app/index.js",
   "dependencies": {
     "underscore.string": "^3.3.6",

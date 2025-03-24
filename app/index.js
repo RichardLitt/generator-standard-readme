@@ -1,9 +1,9 @@
-'use strict'
-const Generator = require('yeoman-generator').default
-const _s = require('underscore.string')
+import Generator from 'yeoman-generator'
+import _s from 'underscore.string'
+
 const domainRegex = /^(((?!-))(xn--|_)?[a-z0-9-]{0,61}[a-z0-9]{1,1}\.)*(xn--)?([a-z0-9][a-z0-9-]{0,60}|[a-z0-9-]{1,30}\.[a-z]{2,})$/
 
-module.exports = class StandardReadmeGenerator extends Generator {
+export default class StandardReadmeGenerator extends Generator {
   async prompting () {
     this.props = await this.prompt([{
       name: 'moduleName',
