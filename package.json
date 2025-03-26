@@ -16,7 +16,7 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "standard && vitest"
+    "test": "standard && vitest run"
   },
   "keywords": [
     "yeoman-generator",
