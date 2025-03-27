@@ -112,7 +112,7 @@ describe('standard-readme:app', async () => {
       readFileSync(join(customTempDir, 'README.md')).toString(),
       readFileSync(join(exampleDir, 'default-readme.md')).toString()
         .replace('2018', new Date().getFullYear())
-        .replace('Richard McRichface', await fullName())
+        .replace('Richard McRichface', await fullName() ?? '')
     )
   })
 
