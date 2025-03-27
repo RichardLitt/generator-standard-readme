@@ -1,3 +1,4 @@
+import fullName from 'fullname'
 import assert from 'node:assert/strict'
 import { existsSync, mkdirSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
@@ -95,6 +96,23 @@ describe('standard-readme:app', async () => {
       readFileSync(join(customTempDir, 'README.md')).toString(),
       readFileSync(join(exampleDir, 'default-readme.md')).toString()
         .replace('2018', new Date().getFullYear())
+    )
+  })
+
+  test('generates README with suggested full name', async () => {
+    await result
+      .create(join(__dirname, './app'))
+      .withAnswers({
+        description: 'test',
+        maintainers: 'RichardLitt'
+      })
+      .run()
+
+    assert.strictEqual(
+      readFileSync(join(customTempDir, 'README.md')).toString(),
+      readFileSync(join(exampleDir, 'default-readme.md')).toString()
+        .replace('2018', new Date().getFullYear())
+        .replace('Richard McRichface', await fullName())
     )
   })
 

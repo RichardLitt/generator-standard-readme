@@ -1,5 +1,6 @@
 import Generator from 'yeoman-generator'
 import _s from 'underscore.string'
+import fullName from 'fullname'
 
 const domainRegex = /^(((?!-))(xn--|_)?[a-z0-9-]{0,61}[a-z0-9]{1,1}\.)*(xn--)?([a-z0-9][a-z0-9-]{0,60}|[a-z0-9-]{1,30}\.[a-z]{2,})$/
 
@@ -103,6 +104,7 @@ export default class StandardReadmeGenerator extends Generator {
       name: 'licensee',
       message: 'Who is the License holder (probably your name)?',
       type: 'input',
+      default: await fullName(),
       validate: x => x.length !== 0 ? true : 'You must attribute the license to someone.'
     }, {
       name: 'year',
