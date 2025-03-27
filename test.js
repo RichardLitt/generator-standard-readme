@@ -100,11 +100,12 @@ describe('standard-readme:app', async () => {
   })
 
   test('generates README with suggested full name', async () => {
+    const githubUsername = 'RichardLitt'
     await result
       .create(join(__dirname, './app'))
       .withAnswers({
         description: 'test',
-        maintainers: 'RichardLitt'
+        maintainers: githubUsername
       })
       .run()
 
@@ -112,7 +113,7 @@ describe('standard-readme:app', async () => {
       readFileSync(join(customTempDir, 'README.md')).toString(),
       readFileSync(join(exampleDir, 'default-readme.md')).toString()
         .replace('2018', new Date().getFullYear())
-        .replace('Richard McRichface', await fullName() ?? '')
+        .replace('Richard McRichface', await fullName() ?? githubUsername)
     )
   })
 

@@ -100,26 +100,33 @@ export default class StandardReadmeGenerator extends Generator {
         return val.length > 0 ? true : 'You have to provide a license'
       },
       when: x => !x.mit
-    }, {
-      name: 'licensee',
-      message: 'Who is the License holder (probably your name)?',
-      type: 'input',
-      default: await fullName(),
-      validate: x => x.length !== 0 ? true : 'You must attribute the license to someone.'
-    }, {
-      name: 'year',
-      message: 'Use the current year?',
-      type: 'confirm',
-      default: true
-    }, {
-      name: 'diffYear',
-      message: 'What years would you like to specify?',
-      type: 'input',
-      validate: (val) => {
-        return val
-      },
-      when: x => !x.year
     }])
+
+    // Separate prompting into two calls to use previous answers as defaults for
+    // newer questions.
+    this.props = {
+      ...this.props,
+      ...(await this.prompt([{
+        name: 'licensee',
+        message: 'Who is the License holder (probably your name)?',
+        type: 'input',
+        default: await fullName() ?? this.props.maintainers,
+        validate: x => x.length !== 0 ? true : 'You must attribute the license to someone.'
+      }, {
+        name: 'year',
+        message: 'Use the current year?',
+        type: 'confirm',
+        default: true
+      }, {
+        name: 'diffYear',
+        message: 'What years would you like to specify?',
+        type: 'input',
+        validate: (val) => {
+          return val
+        },
+        when: x => !x.year
+      }]))
+    }
   }
 
   writing () {
