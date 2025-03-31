@@ -16,7 +16,7 @@ TODO: Put more badges here.<% } %>
 <% } %>- [Install](#install)
 - [Usage](#usage)
 <% if (API) { %>- [API](#api)
-<% } %><% if (maintainers) { %>- [Maintainers](#maintainers)
+<% } %><% if (mainMaintainer) { %>- [Maintainers](#maintainers)
 <% } %>- [Contributing](#contributing)
 - [License](#license)
 
@@ -38,7 +38,7 @@ TODO: Put more badges here.<% } %>
 
 <% } %>## Maintainers
 
-[@<%= maintainers %>](https://<% if (hostedGithub) { %>github.com<% } %><% if (!hostedGithub && hostedDomain) { %><%= hostedDomain %><% } %>/<%= maintainers %>)
+[@<%= mainMaintainer %>](https://<%= hostedDomain %>/<%= mainMaintainer %>)
 
 ## Contributing
 

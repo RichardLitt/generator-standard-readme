@@ -32,6 +32,7 @@
   "dependencies": {
     "fullname": "^5.0.0",
     "underscore.string": "^3.3.6",
+    "username": "^7.0.0",
     "yeoman-environment": "^4.4.3",
     "yeoman-generator": "^7.5.1"
   },

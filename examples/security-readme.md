@@ -8,11 +8,14 @@ TODO: Fill out this long description.
 
 ## Table of Contents
 
+- [Security](#security)
 - [Install](#install)
 - [Usage](#usage)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Security
 
 ## Install
 
@@ -37,4 +40,4 @@ Small note: If editing the README, please conform to the
 
 ## License
 
-CC BY-SA 4.0 © 2018 Richard McRichface
+MIT © 2018 Richard McRichface
