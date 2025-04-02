@@ -76,7 +76,7 @@ export default class StandardReadmeGenerator extends Generator {
         message: 'What is the username of the main maintainer?',
         type: 'input',
         default: async () => {
-          let defaultMaintainer = usernameSync()
+          let defaultMaintainer = usernameSync() ?? ''
           try {
             defaultMaintainer = execSync('git config user.name', { encoding: 'utf8' }).trim()
           } catch (_) {}
