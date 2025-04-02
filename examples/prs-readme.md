@@ -30,11 +30,11 @@ TODO: Fill out this long description.
 
 ## Contributing
 
-PRs accepted.
+
 
 Small note: If editing the README, please conform to the
 [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
-CC BY-SA 4.0 © 2018 Richard McRichface
+MIT © 2018 Richard McRichface

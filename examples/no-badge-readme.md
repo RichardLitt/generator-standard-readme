@@ -1,6 +1,5 @@
 # module-name
 
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 description
 
@@ -37,4 +36,4 @@ Small note: If editing the README, please conform to the
 
 ## License
 
-CC BY-SA 4.0 © 2018 Richard McRichface
+MIT © 2018 Richard McRichface

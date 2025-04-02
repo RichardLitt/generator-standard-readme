@@ -4,8 +4,6 @@
 
 description
 
-TODO: Fill out this long description.
-
 ## Table of Contents
 
 - [Install](#install)
@@ -37,4 +35,4 @@ Small note: If editing the README, please conform to the
 
 ## License
 
-CC BY-SA 4.0 © 2018 Richard McRichface
+MIT © 2018 Richard McRichface

@@ -10,6 +10,7 @@ TODO: Fill out this long description.
 
 - [Install](#install)
 - [Usage](#usage)
+- [API](#api)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
 - [License](#license)
@@ -24,6 +25,8 @@ TODO: Fill out this long description.
 ```sh
 ```
 
+## API
+
 ## Maintainers
 
 [@RichardLitt](https://github.com/RichardLitt)
@@ -37,4 +40,4 @@ Small note: If editing the README, please conform to the
 
 ## License
 
-CC BY-SA 4.0 © 2018 Richard McRichface
+MIT © 2018 Richard McRichface
