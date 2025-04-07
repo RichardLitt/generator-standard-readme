@@ -7,8 +7,15 @@ import { execSync } from 'node:child_process'
 const domainRegex = /^(((?!-))(xn--|_)?[a-z0-9-]{0,61}[a-z0-9]{1,1}\.)*(xn--)?([a-z0-9][a-z0-9-]{0,60}|[a-z0-9-]{1,30}\.[a-z]{2,})$/
 
 export default class StandardReadmeGenerator extends Generator {
-  constructor (...args) {
-    super(...args)
+  /**
+   * @param {string[]} args
+   * @param {import('yeoman-generator').BaseOptions} options
+   * @param {import('yeoman-generator').BaseFeatures?} features
+   */
+  constructor (args, options, features = {}) {
+    // Suppress log about `package.json` being unchanged.
+    features.customInstallTask = true
+    super(args, options, features)
 
     this.props = {}
     /** @type {import('yeoman-generator').PromptQuestions} */
