@@ -1,6 +1,6 @@
 # generator-standard-readme
 
-[![Build Status](https://travis-ci.org/RichardLitt/generator-standard-readme.svg?branch=master)](https://travis-ci.org/RichardLitt/generator-standard-readme)
+[![Build Status](https://github.com/RichardLitt/generator-standard-readme/actions/workflows/ci.yml/badge.svg)](https://github.com/RichardLitt/generator-standard-readme/actions/workflows/ci.yml)
 
 Scaffold out a Standard Readme
 
