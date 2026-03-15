@@ -2,7 +2,7 @@
 <% if (banner) { %>
 ![banner](<%= bannerPath %>)
 <% } %><% if (badge) { %>
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)<% } %><% if (badges) { %>
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)<% } %><% if (badges) { %>
 TODO: Put more badges here.<% } %>
 
 <%= description %>
